@@ -53,6 +53,7 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
+        run: cd Optevus.Ethnicity
         run: dotnet build --configuration Release
 
       - name: dotnet publish
