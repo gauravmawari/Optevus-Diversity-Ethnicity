@@ -8,7 +8,7 @@ on:
  
 env:
   AZURE_WEBAPP_NAME: OptevusDiversityFinal  # Set this to the name of your Azure Web App
-  DOTNET_VERSION: '8.0.x'  # Set this to the .NET Core version to use
+  DOTNET_VERSION: '7.0.x'  # Set this to the .NET Core version to use
  
 jobs:
   build-and-deploy:
