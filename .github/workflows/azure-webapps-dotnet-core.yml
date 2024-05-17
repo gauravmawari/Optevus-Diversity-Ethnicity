@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
  
 env:
-  AZURE_WEBAPP_NAME: OptevusDiversityFinal  # Set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: New1WebApp  # Set this to the name of your Azure Web App
   DOTNET_VERSION: '7.0.x'  # Set this to the .NET Core version to use
  
 jobs:
