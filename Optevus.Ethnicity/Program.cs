@@ -9,14 +9,14 @@ using Optevus.Ethnicity.Repository.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApi(options =>
-    {
-        builder.Configuration.Bind("AzureAdB2C", options);
-        options.Events = new JwtBearerEvents();
-    }, options => { builder.Configuration.Bind("AzureAdB2C", options); });
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//     .AddMicrosoftIdentityWebApi(options =>
+//     {
+//         builder.Configuration.Bind("AzureAdB2C", options);
+//         options.Events = new JwtBearerEvents();
+//     }, options => { builder.Configuration.Bind("AzureAdB2C", options); });
 
-builder.Services.AddAuthorization();
+// builder.Services.AddAuthorization();
 
 builder.Services.AddMediatR(typeof(GetBusinessDivisionsQueryHandler).Assembly);
 
@@ -29,7 +29,7 @@ builder.Services.AddTransient<IJobService, JobService>();
 
 var app = builder.Build();
 app.UseAuthentication();
-app.UseAuthorization();
+// app.UseAuthorization();
 
 if (app.Environment.IsDevelopment())
 {
