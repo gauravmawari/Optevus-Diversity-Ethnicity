@@ -69,8 +69,8 @@ namespace Optevus.Ethnicity.Controllers
 
         [HttpGet]
         [Route("businessdivision")]
-        [Authorize]
-        [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Read")]
+        // [Authorize]
+        // [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Read")]
         public async Task<IActionResult> GetBusinessDivisionAsync()
         {
             var query = new GetBusinessDivisionsQuery();
