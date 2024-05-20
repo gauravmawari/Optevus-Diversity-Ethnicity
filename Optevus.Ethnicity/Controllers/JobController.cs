@@ -41,8 +41,8 @@ namespace Optevus.Ethnicity.Controllers
 
         [HttpGet]
         [Route("countries")]
-        //[Authorize]
-        //[RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Read")]
+        [Authorize]
+        [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Read")]
         public async Task<IActionResult> GetCountriesAsync()
         {
             var query = new GetJobCountriesQuery();
